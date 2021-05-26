@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "libs/ArduinoJson/ArduinoJson.h"
 #include "models.h"
 
@@ -6,8 +7,10 @@ const char *strFilename = "./settings.jsn";
 
 Settings objSettings;
 
-void readSettingFile(const char *strpFilename, Settings &objpSettings) {
+bool readSettingFile(const char *strpFilename, Settings &objpSettings) {
 
+
+    return false; 
 }
 
 
