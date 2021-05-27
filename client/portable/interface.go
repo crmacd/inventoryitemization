@@ -18,18 +18,18 @@ type Item interface {
 }
 
 type ItemDetails struct {
-	Manufacture string
-	Model string
-	OSVersion string
-	OSStatus string
-	SerialNumber string
-	Latitude float64
-	Longitude float64
-	LocationName string
+	Manufacture       string
+	Model             string
+	OSVersion         string
+	OSStatus          string
+	SerialNumber      string
+	Latitude          float64
+	Longitude         float64
+	LocationName      string
 	ReportInTimeStamp time.Time
 	PhysicalCondition string
-	IPAddress string
-	MACAddress string
+	IPAddress         string
+	MACAddress        string
 }
 
 func (objItem ItemDetails) getReportInTimestamp() time.Time {
