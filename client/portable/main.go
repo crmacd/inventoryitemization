@@ -1,5 +1,14 @@
 package main
 
+// Load Setting File
+// Setting File Missing Create New Setting File with Prompts
+// Load Settings File
+
+// Read System Settings
+// Write File with System Settings
+
+// Send System Settings File
+
 import (
 	"bufio"
 	"encoding/json"
