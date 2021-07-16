@@ -32,8 +32,8 @@ type ItemDetails struct {
 	MACAddress        string
 }
 
-func (objItem ItemDetails) getReportInTimestamp() time.Time {
-	objItem.ReportInTimeStamp := time.Now()
+func (objItem *ItemDetails) getReportInTimestamp() time.Time {
+	objItem.ReportInTimeStamp = time.Now()
 	return objItem.ReportInTimeStamp
 
 }

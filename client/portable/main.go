@@ -16,6 +16,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strings"
+	"runtime"
 )
 
 type Settings struct {
@@ -69,6 +70,26 @@ func printSettings(objSettings Settings) {
 	fmt.Println("Host URL: " + objSettings.HostName)
 	fmt.Println("Group ID: " + objSettings.GroupID)
 	fmt.Println("Frequency (in seconds): " + fmt.Sprint(objSettings.Frequency))
+}
+
+func readOSSettingsDarwin() ItemDetails {
+	var objItem ItemDetails
+
+	return objItem
+}
+
+func readOSSettings() ItemDetails {
+	var objItem ItemDetails
+	switch runtime.GOOS {
+	case "windows":
+		fmt.Println("Windows...")
+	case "linux":
+		fmt.Println("Reading linux...")
+	case "darwin":
+		fmt.Println("OS X...")
+		objItem = readOSSettingsDarwin()
+	}
+	return objItem
 }
 
 func main() {
